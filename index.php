@@ -211,7 +211,7 @@
 				<div class="socials">
 					<a href="https://www.facebook.com/agnieszka.kochman"><i class="fa fa-facebook"></i></a>
 					<a href="https://www.linkedin.com/in/agnieszkakochman/"><i class="fa fa-linkedin"></i></a>
-					<a href="https://github.com/AgnieszkaKochman?tab=repositories"><i class="fa fa-github"></i></a>
+					<a href="https://github.com/AgnieszkaKochman/AgnieszkaKochman.github.io"><i class="fa fa-github"></i></a>
 				</div>
 			</article>
 			<div class="first-block-small right-block"></div>
