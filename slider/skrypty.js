@@ -1,9 +1,9 @@
 var slider = document.getElementById('slider');
 var slideList = document.getElementById('slide-list');
 var slide = document.querySelectorAll('.slide');
-var dots = document.querySelectorAll('.dot');
 var numberOfSlides = 4;
 var currentSlide = 0; // first image default
+var index = 0;
 
 initSlider();
 setArrowNavigation();
@@ -17,7 +17,6 @@ document.getElementById('arrow-right').addEventListener('click', function() {
 	move(currentSlide + 1)
 });
 
-dots.forEach(dot => dot.addEventListener('click', clickDot));
 
 function clickDot() {
 	var thisIndex = parseInt(this.getAttribute('id').slice(4,5));
@@ -29,14 +28,14 @@ function clickDot() {
 * Function calculates and sets slide width, paddings and distance from left
 */
 function initSlider() {
-	var slideWidth = 0.9 * (100 / numberOfSlides);
-	var slidePadding = 0.05 * (100 / numberOfSlides);
-	var index = 0;
-
 	slide.forEach(setImage);
 }
 
 function setImage(item) {
+	var slideWidth = 0.9 * (100 / numberOfSlides);
+	var slidePadding = 0.05 * (100 / numberOfSlides);
+	
+
 	item.setAttribute('data-id', index);
 	item.style.width = slideWidth + '%';
 	item.style.paddingLeft = slidePadding + '%';
@@ -53,12 +52,18 @@ function setImage(item) {
 function setArrowNavigation() {
 	var spanLeft = document.createElement('span');
 	spanLeft.setAttribute('id', 'arrow-left');
-	spanLeft.classList.add('fa fa-angle-left arrow arrow-left');
+	spanLeft.classList.add('fa');
+	spanLeft.classList.add('fa-angle-left');
+	spanLeft.classList.add('arrow');
+	spanLeft.classList.add('arrow-left');
 	slider.appendChild(spanLeft);
 
 	var spanRight = document.createElement('span');
 	spanRight.setAttribute('id', 'arrow-right');
-	spanRight.classList.add('fa fa-angle-right arrow arrow-right');
+	spanRight.classList.add('fa');
+	spanRight.classList.add('fa-angle-right');
+	spanRight.classList.add('arrow');
+	spanRight.classList.add('arrow-right');
 	slider.appendChild(spanRight);
 }
 
@@ -77,12 +82,17 @@ function setDotsNavigation() {
 	for (i = 0; i <= numberOfSlides - 1; i++ ) {
 		var span = document.createElement('span');
 		span.setAttribute('id', 'nav-' + i);
-		span.classList.add('fa fa-circle-o dot');
+		span.classList.add('fa');
+		span.classList.add('fa-circle-o');
+		span.classList.add('dot');
 		dotsNav.appendChild(span);
 	}
 
 	var nav0 = document.getElementById('nav-0');
 	nav0.classList.add('fa-circle');
+
+	var dots = document.querySelectorAll('.dot');
+	dots.forEach(dot => dot.addEventListener('click', clickDot));
 }
 
 
@@ -92,9 +102,14 @@ function setDotsNavigation() {
 function move(newSlide) {
 	if (newSlide < 0 || newSlide >= numberOfSlides) return;
 
-	var marginLeft = newSlide * (-100) + '%';
-	var tmp = 0;
-	var id = setInterval(frame, 5);
+	var marginLeft = newSlide * (-100);
+	var marginLeftProc = marginLeft + '%';
+	var tmp = currentSlide * (-100);
+	var id = setInterval(frame, 10);
+	var step;
+
+	if (currentSlide < newSlide) step = 2;
+	else step = -2;
 
     function frame() {
         if (tmp == marginLeft) {
@@ -102,7 +117,7 @@ function move(newSlide) {
             currentSlide = newSlide;
 			changeActiveDot();
         } else {
-            tmp -= newSlide;
+            tmp -= step;
             slideList.style.marginLeft = tmp + '%';
         }
     }
