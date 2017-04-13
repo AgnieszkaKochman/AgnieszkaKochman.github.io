@@ -1,29 +1,28 @@
-var slider = $('#slider');
-var slideList = $('#slide-list');
-var slide = $('#slider li');
+var slider = document.getElementById('slider');
+var slideList = document.getElementById('slide-list');
+var slide = document.querySelectorAll('.slide');
+var dots = document.querySelectorAll('.dot');
 var numberOfSlides = 4;
 var currentSlide = 0; // first image default
 
+initSlider();
+setArrowNavigation();
+setDotsNavigation();
 
-$(document).ready( function() {
-	initSlider();
-	setArrowNavigation();
-	setDotsNavigation();
+document.getElementById('arrow-left').addEventListener('click', function() {
+	move(currentSlide - 1)
+});
 
-	$('#arrow-left').on('click', function() {
-		move(currentSlide - 1)
-	});
-	$('#arrow-right').on('click', function() {
-		move(currentSlide + 1)
-	});
+document.getElementById('arrow-right').addEventListener('click', function() {
+	move(currentSlide + 1)
+});
 
-	$('.dot').each( function() {
-		$(this).on('click', function() {
-			var thisIndex = parseInt($(this).attr('id').slice(4,5));
-			move(thisIndex);
-		});
-	} );
-} );
+dots.forEach(dot => dot.addEventListener('click', clickDot));
+
+function clickDot() {
+	var thisIndex = parseInt(this.getAttribute('id').slice(4,5));
+	move(thisIndex);
+}
 
 
 /**
@@ -34,16 +33,17 @@ function initSlider() {
 	var slidePadding = 0.05 * (100 / numberOfSlides);
 	var index = 0;
 
-	slide.each( function() {
-		$(this).attr('data-id', index);
-		$(this).css( {
-			'width' : slideWidth + '%', 
-			'padding-left' : slidePadding + '%',
-			'padding-right' : slidePadding + '%',
-			'left' : (100 / numberOfSlides) * index + '%'
-		} );
-		index++;
-	} );
+	slide.forEach(setImage);
+}
+
+function setImage(item) {
+	item.setAttribute('data-id', index);
+	item.style.width = slideWidth + '%';
+	item.style.paddingLeft = slidePadding + '%';
+	item.style.paddingRight = slidePadding + '%';
+	item.style.left = (100 / numberOfSlides) * index + '%';
+
+	index++;
 }
 
 
@@ -51,8 +51,15 @@ function initSlider() {
 * Function adds arrow navigation to slider
 */
 function setArrowNavigation() {
-	slider.append('<span id="arrow-left" class="fa fa-angle-left arrow arrow-left"></span>');
-	slider.append('<span id="arrow-right" class="fa fa-angle-right arrow arrow-right"></span>');
+	var spanLeft = document.createElement('span');
+	spanLeft.setAttribute('id', 'arrow-left');
+	spanLeft.classList.add('fa fa-angle-left arrow arrow-left');
+	slider.appendChild(spanLeft);
+
+	var spanRight = document.createElement('span');
+	spanRight.setAttribute('id', 'arrow-right');
+	spanRight.classList.add('fa fa-angle-right arrow arrow-right');
+	slider.appendChild(spanRight);
 }
 
 
@@ -60,14 +67,22 @@ function setArrowNavigation() {
 * Function adds dots navigation to slider
 */
 function setDotsNavigation() {
-	slider.append('<div id="dots-nav" class="dots-nav"></div>');
-	var dotsNav = $('#dots-nav');
+	var dotsDiv = document.createElement('div');
+	dotsDiv.setAttribute('id', 'dots-nav');
+	dotsDiv.classList.add('dots-nav');
+	slider.appendChild(dotsDiv);
+
+	var dotsNav = document.getElementById('dots-nav');
 
 	for (i = 0; i <= numberOfSlides - 1; i++ ) {
-		dotsNav.append('<span id="nav-' + i + '" class="fa fa-circle-o dot"></span>');
+		var span = document.createElement('span');
+		span.setAttribute('id', 'nav-' + i);
+		span.classList.add('fa fa-circle-o dot');
+		dotsNav.appendChild(span);
 	}
 
-	$('#nav-0').addClass('fa-circle');
+	var nav0 = document.getElementById('nav-0');
+	nav0.classList.add('fa-circle');
 }
 
 
@@ -78,10 +93,19 @@ function move(newSlide) {
 	if (newSlide < 0 || newSlide >= numberOfSlides) return;
 
 	var marginLeft = newSlide * (-100) + '%';
-	slideList.animate({'margin-left' : marginLeft}, 500, function() {
-		currentSlide = newSlide;
-		changeActiveDot();
-	});
+	var tmp = 0;
+	var id = setInterval(frame, 5);
+
+    function frame() {
+        if (tmp == marginLeft) {
+            clearInterval(id);
+            currentSlide = newSlide;
+			changeActiveDot();
+        } else {
+            tmp -= newSlide;
+            slideList.style.marginLeft = tmp + '%';
+        }
+    }
 }
 
 
@@ -89,9 +113,14 @@ function move(newSlide) {
 * Function sets active dot for current slide
 */
 function changeActiveDot() {
-	$('.dot').each( function() {
-		$(this).removeClass('fa-circle');
-	} );
+	var dots = document.querySelectorAll('.dot');
 
-	$('#nav-' + currentSlide).addClass('fa-circle');
+	dots.forEach(removeActiveClass);
+
+	var dot = document.getElementById('nav-' + currentSlide);
+	dot.classList.add('fa-circle');
+}
+
+function removeActiveClass(item) {
+	item.classList.remove('fa-circle');
 }

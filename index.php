@@ -63,7 +63,7 @@
 								</div>								
 							</div>
 						</a>
-						<a href="" class="img-2" data-id="2">
+						<a href="https://agnieszkakochman.github.io/hexal-psd/" class="img-2" data-id="2">
 							<img src="works/02.png" class="works-img">
 							<div class="hover-block">
 								<div>
@@ -74,7 +74,7 @@
 								</div>								
 							</div>
 						</a>
-						<a href="" class="img-3" data-id="3">
+						<a href="https://agnieszkakochman.github.io/tic-tac-toe/" class="img-3" data-id="3">
 							<img src="works/03.png" class="works-img">
 							<div class="hover-block">
 								<div>
@@ -85,7 +85,7 @@
 								</div>								
 							</div>
 						</a>
-						<a href="" class="img-4" data-id="4">
+						<a href="https://agnieszkakochman.github.io/memory/" class="img-4" data-id="4">
 							<img src="works/04.png" class="works-img">
 							<div class="hover-block">
 								<div>
@@ -96,7 +96,7 @@
 								</div>								
 							</div>
 						</a>
-						<a href="" class="img-5" data-id="5">
+						<a href="https://agnieszkakochman.github.io/slider/" class="img-5" data-id="5">
 							<img src="works/05.png" class="works-img">
 							<div class="hover-block">
 								<div>
