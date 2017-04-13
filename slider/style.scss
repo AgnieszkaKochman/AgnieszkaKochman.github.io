@@ -1,0 +1,116 @@
+/*** FONTS ***/
+
+@import url('https://fonts.googleapis.com/css?family=Dosis|Open+Sans');
+
+
+/*** COLORS ***/
+
+$dark-green: #4A6B58;
+$medium-green: #B3AE16;
+$light-green: #FFFC8F;
+$light-gray: #FEFFF3;
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #333333;
+	background-color: $light-green;
+	padding-top: 80px;
+}
+
+header {
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	background-color: $medium-green;
+
+	h1 {
+		font-family: 'Dosis';
+		font-size: 2em;
+		line-height: 80px;
+		vertical-align: middle;
+		text-align: center;
+		color: $light-gray;
+	}
+}
+
+
+section {
+	width: 100%;
+	max-width: 1100px;
+	margin: 100px auto;
+}
+
+.slider {
+	width: 80%;
+	height: 0;
+	padding-bottom: 40%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+
+	ul {
+		width: 400%;
+		display: block;
+		clear: both;
+		position: absolute;
+		left: 0;
+
+		transition: left 1.5s;
+
+		li {
+			display: inline-block;
+			width: 25%;
+			position: absolute;
+
+			div {
+				width: 90%;
+				margin: 0 auto;
+				padding-bottom: 56%;
+				height: 0;
+				position: relative;
+
+				img {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	.arrow {
+		font-size: 50px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+	}
+
+	.arrow-left {
+		left: 0;
+	}
+
+	.arrow-right {
+		right: 0;
+	}
+
+	.dots-nav {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: rgba(170,170,170,0.6);
+		padding: 3px 5px;
+		border-radius: 10px;
+
+		span {
+			margin: 0 7px;
+			cursor: pointer;
+			color: #333;
+		}
+	}
+}
