@@ -1,0 +1,65 @@
+@import "https://fonts.googleapis.com/css?family=Kaushan+Script";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #616161;
+  background-color: #fafafa; }
+
+.turquoise {
+  color: #80CBC4; }
+
+h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3.5em;
+  color: #616161;
+  text-shadow: 1px 1px 0 #898989; }
+
+h2 {
+  font-size: 1.8em;
+  color: #898989;
+  font-weight: 300; }
+
+p {
+  font-size: 1.4em;
+  padding: 0 5%; }
+
+.note {
+  font-size: 1em; }
+
+section, header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+article {
+  width: 100%;
+  margin: 50px 0; }
+  article:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+  article div {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative; }
+    article div img {
+      max-width: 100%;
+      height: auto;
+      border: 5px solid #ffffff;
+      box-shadow: 0px 0px 15px #898989; }
+    article div p {
+      padding-top: 30px; }
+
+@media screen and (max-width: 768px) {
+  article:after {
+    display: none; }
+  article div {
+    width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */

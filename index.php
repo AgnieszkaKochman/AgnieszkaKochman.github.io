@@ -69,7 +69,7 @@
 								<div>
 									<h3>Hexal</h3>
 									<p>Website from free PSD project</p>
-									<p>HTML5, CSS3, JS (jQuery), RWD</p>
+									<p>HTML5, CSS3, JS, RWD</p>
 									<i class="lnr lnr-eye"></i>
 								</div>								
 							</div>
@@ -102,7 +102,7 @@
 								<div>
 									<h3>JS Slider</h3>
 									<p>Simple JavaScript slider</p>
-									<p>HTML5, CSS3, jQuery, RWD</p>
+									<p>HTML5, CSS3, JavaScript, RWD</p>
 									<i class="lnr lnr-eye"></i>
 								</div>								
 							</div>
