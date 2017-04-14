@@ -52,7 +52,7 @@
 				<div id="stage" class="stage">
 					<i class="lnr lnr-chevron-left"></i>
 					<div id="carousel" class="carousel">
-						<a href="" class="img-1" data-id="1">
+						<a href="https://agnieszkakochman.github.io/time-management" class="img-1" data-id="1">
 							<img src="works/01.png" class="works-img first">
 							<div class="hover-block">
 								<div>
