@@ -7,3 +7,11 @@ See my projects:
 - TicTacToe
 - Memory
 - Slider
+
+See description of my engineering project:
+- Time-management
+
+
+For more info visit my website:
+
+http://agnieszkakochman.pl
