@@ -27,7 +27,7 @@ function prepareBoard() {
 	displayTiles();
 
 	tilesElements = document.querySelectorAll('.image');
-	tilesElements.forEach(tile => tile.addEventListener('click', tileClick));
+	tilesElements.forEach(tile => tile.addEventListener('click touchstart', tileClick));
 }
 
 

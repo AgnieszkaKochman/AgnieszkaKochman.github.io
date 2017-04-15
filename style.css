@@ -569,5 +569,7 @@ textarea {
 
   .submit {
     width: 475px; } }
+_:-ms-fullscreen, :root #carousel {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

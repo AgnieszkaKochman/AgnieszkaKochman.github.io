@@ -52,7 +52,7 @@
 				<div id="stage" class="stage">
 					<i class="lnr lnr-chevron-left"></i>
 					<div id="carousel" class="carousel">
-						<a href="https://agnieszkakochman.github.io/time-management" class="img-1" data-id="1">
+						<a href="https://agnieszkakochman.github.io/time-management" target="_blank" class="img-1" data-id="1">
 							<img src="works/01.png" class="works-img first">
 							<div class="hover-block">
 								<div>
@@ -63,7 +63,7 @@
 								</div>								
 							</div>
 						</a>
-						<a href="https://agnieszkakochman.github.io/hexal-psd/" class="img-2" data-id="2">
+						<a href="https://agnieszkakochman.github.io/hexal-psd/" target="_blank" class="img-2" data-id="2">
 							<img src="works/02.png" class="works-img">
 							<div class="hover-block">
 								<div>
@@ -74,7 +74,7 @@
 								</div>								
 							</div>
 						</a>
-						<a href="https://agnieszkakochman.github.io/tic-tac-toe/" class="img-3" data-id="3">
+						<a href="https://agnieszkakochman.github.io/tic-tac-toe/" target="_blank" class="img-3" data-id="3">
 							<img src="works/03.png" class="works-img">
 							<div class="hover-block">
 								<div>
@@ -85,7 +85,7 @@
 								</div>								
 							</div>
 						</a>
-						<a href="https://agnieszkakochman.github.io/memory/" class="img-4" data-id="4">
+						<a href="https://agnieszkakochman.github.io/memory/" target="_blank" class="img-4" data-id="4">
 							<img src="works/04.png" class="works-img">
 							<div class="hover-block">
 								<div>
@@ -96,7 +96,7 @@
 								</div>								
 							</div>
 						</a>
-						<a href="https://agnieszkakochman.github.io/slider/" class="img-5" data-id="5">
+						<a href="https://agnieszkakochman.github.io/slider/" target="_blank" class="img-5" data-id="5">
 							<img src="works/05.png" class="works-img">
 							<div class="hover-block">
 								<div>
@@ -209,9 +209,9 @@
 					}
 					?>
 				<div class="socials">
-					<a href="https://www.facebook.com/agnieszka.kochman"><i class="fa fa-facebook"></i></a>
-					<a href="https://www.linkedin.com/in/agnieszkakochman/"><i class="fa fa-linkedin"></i></a>
-					<a href="https://github.com/AgnieszkaKochman/AgnieszkaKochman.github.io"><i class="fa fa-github"></i></a>
+					<a href="https://www.facebook.com/agnieszka.kochman" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.linkedin.com/in/agnieszkakochman/" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<a href="https://github.com/AgnieszkaKochman/AgnieszkaKochman.github.io" target="_blank"><i class="fa fa-github"></i></a>
 				</div>
 			</article>
 			<div class="first-block-small right-block"></div>

@@ -1,6 +1,12 @@
 var angle = 0;
 var windowWidth = window.innerWidth;
 
+var b = document.documentElement;
+b.setAttribute('data-useragent',  navigator.userAgent);
+b.setAttribute('data-platform', navigator.platform );
+
+// IE 11.0 == Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko 
+
 $(document).ready(function($) {
     var sections = $('.page-section');
     var direction = 'up';
@@ -41,9 +47,13 @@ $(document).ready(function($) {
                 currentSection++;
             }
 
-            $('html, body').stop().animate({
-                scrollTop: sections.eq(currentSection).offset().top
-            }, 1000);
+
+            if (currentSection < 5) {
+                $('html, body').stop().animate({
+                        scrollTop: sections.eq(currentSection).offset().top
+                    
+                }, 1000);
+            }
             return false;
         }
     });
