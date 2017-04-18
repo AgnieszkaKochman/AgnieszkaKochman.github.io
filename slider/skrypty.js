@@ -5,9 +5,24 @@ var numberOfSlides = 4;
 var currentSlide = 0; // first image default
 var index = 0;
 
-initSlider();
-setArrowNavigation();
-setDotsNavigation();
+
+
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+
+function fn() {
+	initSlider();
+	setArrowNavigation();
+	setDotsNavigation();
+}
+
+
 
 document.getElementById('arrow-left').addEventListener('click', function() {
 	move(currentSlide - 1)
