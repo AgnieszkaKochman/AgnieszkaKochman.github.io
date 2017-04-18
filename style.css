@@ -121,6 +121,9 @@ form {
   margin: 15px auto 20px auto;
   width: 320px; }
 
+label {
+  display: none; }
+
 .field {
   width: 90%;
   margin: 10px auto;

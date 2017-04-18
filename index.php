@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
 					<i class="lnr lnr-chevron-left"></i>
 					<div id="carousel" class="carousel">
 						<a href="https://agnieszkakochman.github.io/time-management" target="_blank" class="img-1" data-id="1">
-							<img src="works/01.png" class="works-img first">
+							<img src="works/01.png" alt="time management" class="works-img first">
 							<div class="hover-block">
 								<div>
 									<h3>Time Management - Engineering project</h3>
@@ -64,7 +64,7 @@
 							</div>
 						</a>
 						<a href="https://agnieszkakochman.github.io/hexal-psd/" target="_blank" class="img-2" data-id="2">
-							<img src="works/02.png" class="works-img">
+							<img src="works/02.png" alt="hexal" class="works-img">
 							<div class="hover-block">
 								<div>
 									<h3>Hexal</h3>
@@ -75,7 +75,7 @@
 							</div>
 						</a>
 						<a href="https://agnieszkakochman.github.io/tic-tac-toe/" target="_blank" class="img-3" data-id="3">
-							<img src="works/03.png" class="works-img">
+							<img src="works/03.png" alt="tic tac toe" class="works-img">
 							<div class="hover-block">
 								<div>
 									<h3>Tic Tac Toe</h3>
@@ -86,7 +86,7 @@
 							</div>
 						</a>
 						<a href="https://agnieszkakochman.github.io/memory/" target="_blank" class="img-4" data-id="4">
-							<img src="works/04.png" class="works-img">
+							<img src="works/04.png" alt="memory" class="works-img">
 							<div class="hover-block">
 								<div>
 									<h3>Memory</h3>
@@ -97,7 +97,7 @@
 							</div>
 						</a>
 						<a href="https://agnieszkakochman.github.io/slider/" target="_blank" class="img-5" data-id="5">
-							<img src="works/05.png" class="works-img">
+							<img src="works/05.png" alt="slider" class="works-img">
 							<div class="hover-block">
 								<div>
 									<h3>JS Slider</h3>
@@ -123,25 +123,22 @@
 				<ul class="skills-list">
 					<li>HTML(5)</li>
 					<li>CSS(3)</li>
+					<li>SCSS</li>
 					<li>RWD</li>
 					<li>jQuery</li>
-					<li>SCSS</li>
 				</ul>
 				<h3>Basics</h3>
 				<ul class="skills-list">
 					<li>JavaScript</li>
 					<li>AngularJS</li>
-					<li>AJAX</li>
-					<li>JSON</li>
 					<li>MySQL</li>
 					<li>PHP</li>
 					<li>Wordpress</li>
-					<li>PrestaShop</li>
 				</ul>
 				<h3>Other</h3>
 				<ul class="skills-list">
 					<li>Photoshop</li>
-					<li>GIMP</li>
+					<li>Gimp</li>
 					<li>Git</li>
 				</ul>
 			</article>
@@ -172,12 +169,15 @@
 
 				
 
-				<form action="" method="POST" name="contactForm" onsubmit="return validateForm()">
-					<input type="text" name="formName" placeholder="Your name" class="text-field field" requiviolet>
+				<form method="POST" name="contactForm" onsubmit="return validateForm()">
+					<label for="formName">Name</label>
+					<input type="text" name="formName" id="formName" placeholder="Your name" class="text-field field" required>
 					<p id="name-error" class="error"></p>
-					<input type="email" name="formEmail" placeholder="Your email" class="text-field field" requiviolet>
+					<label for="formEmail">Email</label>
+					<input type="email" name="formEmail" id="formEmail" placeholder="Your email" class="text-field field" required>
 					<p id="email-error" class="error"></p>
-					<textarea placeholder="Message" name="formText" class="field" requiviolet></textarea>
+					<label for="formText">Message</label>
+					<textarea placeholder="Message" name="formText" id="formText" class="field" required></textarea>
 					<div class="field submit">
 						<input type="submit" name="submit" value="send">
 					</div>
@@ -209,9 +209,9 @@
 					}
 					?>
 				<div class="socials">
-					<a href="https://www.facebook.com/agnieszka.kochman" target="_blank"><i class="fa fa-facebook"></i></a>
-					<a href="https://www.linkedin.com/in/agnieszkakochman/" target="_blank"><i class="fa fa-linkedin"></i></a>
-					<a href="https://github.com/AgnieszkaKochman/AgnieszkaKochman.github.io" target="_blank"><i class="fa fa-github"></i></a>
+					<a href="https://www.facebook.com/agnieszka.kochman" target="_blank"><span class="fa fa-facebook"></span></a>
+					<a href="https://www.linkedin.com/in/agnieszkakochman/" target="_blank"><span class="fa fa-linkedin"></span></a>
+					<a href="https://github.com/AgnieszkaKochman/AgnieszkaKochman.github.io" target="_blank"><span class="fa fa-github"></span></a>
 				</div>
 			</article>
 			<div class="first-block-small right-block"></div>
