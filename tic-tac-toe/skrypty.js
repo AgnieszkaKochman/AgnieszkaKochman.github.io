@@ -172,7 +172,7 @@ function displayWinner(win) {
 function changeGameState() {
 	moves++;
 
-	if (moves == 9) isEnd = true;
+	//if (moves == 9) isEnd = true;
 
 	if (!isEnd) currentPlayer = (currentPlayer === "X" ? "O" : "X");
 }
@@ -184,6 +184,10 @@ function changeGameState() {
 function checkEndOfGame() {
 	if (isEnd) {
 		document.getElementById('info').innerText = "Player " + currentPlayer + " won!";
+	}
+
+	if (!isEnd && moves == 9) {
+		document.getElementById('info').innerText = "No one won!";
 	}
 }
 
