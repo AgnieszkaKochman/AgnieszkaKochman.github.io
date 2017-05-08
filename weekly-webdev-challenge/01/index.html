@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>#1 WebDev Challenge</title>
+
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<main>
+			<header>
+				<img src="img/logo.png" alt="logo1">
+			</header>
+			<section class="column col-1">
+				<article>
+					<h2>Register form</h2>
+					<div class="form-wrapper">
+						<form id="form1">
+							<label for="form1-username">
+								<div class="icon-wrapper"><img src="img/user.png" alt="user"></div>
+								<input id="form1-username" class="field" name="form1-username" type="text" placeholder="Username">
+							</label>
+							<label for="form1-password">
+								<div class="icon-wrapper"><img src="img/lock.png" alt="lock"></div>
+								<input id="form1-password" class="field" name="form1-password" type="password" placeholder="Password">
+							</label>
+							<label for="form1-confirm">
+								<div class="icon-wrapper"><img src="img/lock.png" alt="lock"></div>
+								<input id="form1-confirm" class="field" name="form1-confirm" type="password" placeholder="Confirm password">
+							</label>
+							<label for="form1-email">
+								<div class="icon-wrapper"><img src="img/envelope.png" alt="envelope"></div>
+								<input id="form1-email" class="field" name="form1-email" type="email" placeholder="Email">
+							</label>
+							<label for="form1-location" class="select-label">
+								<div class="icon-wrapper"><img src="img/map.png" alt="map"></div>
+								<select id="form1-location" class="field select-field" placeholder="Your location">
+									<option value="" disabled selected>Your location</option>
+									<option>Europe</option>
+									<option>Africa</option>
+									<option>Asia</option>
+									<option>Australia</option>
+									<option>North America</option>
+									<option>South America</option>
+									<option>Antarctica</option>
+								</select>
+							</label>
+							<label for="form1-regulations" class="check">
+								<input id="form1-regulations" type="checkbox">
+								<div></div>
+								I have read and accept the terms of use
+							</label>
+							<button>Sign up</button>
+						</form>
+					</div>
+				</article>
+				<article>
+					<h2>Send Email</h2>
+					<div class="form-wrapper">
+						<form id="form2">
+							<label for="form2-username">
+								<div class="icon-wrapper"><img src="img/user.png" alt="user"></div>
+								<input id="form2-username" class="field" name="form2-username" type="text" placeholder="Your Name">
+							</label>
+							<label for="form2-email">
+								<div class="icon-wrapper"><img src="img/envelope.png" alt="envelope"></div>
+								<input id="form2-email" class="field" name="form2-email" type="email" placeholder="Your Email">
+							</label>
+							<textarea id="form2-message" name="form2-message" placeholder="Type your message..."></textarea>
+							<label for="form2-email-copy" class="check">
+								<input id="form2-email-copy" type="checkbox">
+								<div></div>
+								Send a copy to my email
+							</label>
+							<button>Send Email</button>
+						</form>
+					</div>
+				</article>
+			</section>
+			<section class="column col-2">
+				<article>
+					<h2>Sign In Form</h2>
+					<div class="form-wrapper">
+						<form id="form3" class="form3">
+							<label for="form3-username">
+								<div class="icon-wrapper"><img src="img/user.png" alt="user"></div>
+								<input id="form3-username" class="field" name="form3-username" type="text" placeholder="Your Name">
+							</label>
+							<label for="form3-password">
+								<div class="icon-wrapper"><img src="img/lock.png" alt="lock"></div>
+								<input id="form3-password" class="field" name="form3-password" type="password" placeholder="Password">
+							</label>
+							<label for="form3-remember" class="check">
+								<input id="form3-remember" type="checkbox">
+								<div></div>
+								Remember me
+							</label>
+							<button class="small right">Sign in</button>
+						</form>
+					</div>
+				</article>
+				<article>
+					<h2>Recover Form</h2>
+					<div class="form-wrapper">
+						<form id="form4">
+							<label for="form4-email">
+								<div class="icon-wrapper"><img src="img/envelope.png" alt="envelope"></div>
+								<input id="form4-email" class="field" name="form4-email" type="email" placeholder="Enter your Email">
+							</label>
+							<label for="form4-phone">
+								<div class="icon-wrapper"><img src="img/phone.png" alt="phone"></div>
+								<input id="form4-phone" class="field" name="form4-phone" type="tel" placeholder="Enter your Phone number">
+							</label>
+							<button class="small">Send</button>
+							<button class="small right" disabled>Done</button>
+						</form>
+					</div>
+				</article>
+				<article>
+					<h2>Subscribe Form</h2>
+					<div class="form-wrapper">
+						<form id="form5">
+							<label for="form5-email">
+								<div class="icon-wrapper"><img src="img/envelope.png" alt="envelope"></div>
+								<input id="form5-email" class="field" name="form5-email" type="email" placeholder="Enter your Email">
+							</label>
+							<button class="small">Subscribe</button>
+							<button class="small resignation right">No, Thanks</button>
+						</form>
+					</div>
+				</article>
+			</section>
+			<footer>
+				<img src="img/logo2.png" alt="logo2">
+				<img src="img/logo3.png" alt="logo3">
+			</footer>			
+		</main>
+
+		<script type="text/javascript" src="skrypty.js"></script>
+	</body>
+</html>
