@@ -11,6 +11,8 @@ See my projects:
 See description of my engineering project:
 - Time-management
 
+See my Weekly Webdev Challenge projects:
+- 01
 
 For more info visit my website:
 
