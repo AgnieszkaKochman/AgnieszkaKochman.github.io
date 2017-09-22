@@ -75,7 +75,7 @@ footer {
 		padding: 20px;
 		border-radius: inherit;
 
-		label {
+		.field-wrapper {
 			width: 100%;
 			height: 40px;
 			margin: 20px 0;
@@ -248,7 +248,7 @@ footer {
 }
 
 .form3 {
-	.check {
+	.field-wrapper.check {
 		width: 45%;
 		float: left;
 	}
@@ -313,7 +313,7 @@ h2 {
 				font-size: 1em;
 			}
 
-			label.check {
+			.field-wrapper.check {
 				line-height: 1.35;
 				margin-bottom: 20px;
 			}

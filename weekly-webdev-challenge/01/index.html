@@ -18,25 +18,35 @@
 					<h2>Register form</h2>
 					<div class="form-wrapper">
 						<form id="form1">
-							<label for="form1-username">
-								<div class="icon-wrapper"><img src="img/user.png" alt="user"></div>
-								<input id="form1-username" class="field" name="form1-username" type="text" placeholder="Username">
-							</label>
-							<label for="form1-password">
-								<div class="icon-wrapper"><img src="img/lock.png" alt="lock"></div>
-								<input id="form1-password" class="field" name="form1-password" type="password" placeholder="Password">
-							</label>
-							<label for="form1-confirm">
-								<div class="icon-wrapper"><img src="img/lock.png" alt="lock"></div>
-								<input id="form1-confirm" class="field" name="form1-confirm" type="password" placeholder="Confirm password">
-							</label>
-							<label for="form1-email">
-								<div class="icon-wrapper"><img src="img/envelope.png" alt="envelope"></div>
-								<input id="form1-email" class="field" name="form1-email" type="email" placeholder="Email">
-							</label>
-							<label for="form1-location" class="select-label">
-								<div class="icon-wrapper"><img src="img/map.png" alt="map"></div>
-								<select id="form1-location" class="field select-field" placeholder="Your location">
+							<div class="field-wrapper" for="form1-username">
+								<label class="icon-wrapper">
+									<img src="img/user.png" alt="user">
+								</label>
+								<input id="form1-username" class="field" name="form1-username" type="text" placeholder="Username" required>
+							</div>
+							<div class="field-wrapper" for="form1-password">
+								<label class="icon-wrapper">
+									<img src="img/lock.png" alt="lock">
+								</label>
+								<input id="form1-password" class="field" name="form1-password" type="password" placeholder="Password" required>
+							</div>
+							<div class="field-wrapper" for="form1-confirm">
+								<label class="icon-wrapper">
+									<img src="img/lock.png" alt="lock">
+								</label>
+								<input id="form1-confirm" class="field" name="form1-confirm" type="password" placeholder="Confirm password" required>
+							</div>
+							<div class="field-wrapper" for="form1-email">
+								<label class="icon-wrapper">
+									<img src="img/envelope.png" alt="envelope">
+								</label>
+								<input id="form1-email" class="field" name="form1-email" type="email" placeholder="Email" required>
+							</div>
+							<div class="field-wrapper select-label" for="form1-location">
+								<label class="icon-wrapper">
+									<img src="img/map.png" alt="map">
+								</label>
+								<select id="form1-location" class="field select-field" placeholder="Your location" required>
 									<option value="" disabled selected>Your location</option>
 									<option>Europe</option>
 									<option>Africa</option>
@@ -46,9 +56,9 @@
 									<option>South America</option>
 									<option>Antarctica</option>
 								</select>
-							</label>
-							<label for="form1-regulations" class="check">
-								<input id="form1-regulations" type="checkbox">
+							</div>
+							<label class="field-wrapper check" for="form1-regulations">
+								<input id="form1-regulations" type="checkbox" required>
 								<div></div>
 								I have read and accept the terms of use
 							</label>
@@ -60,16 +70,20 @@
 					<h2>Send Email</h2>
 					<div class="form-wrapper">
 						<form id="form2">
-							<label for="form2-username">
-								<div class="icon-wrapper"><img src="img/user.png" alt="user"></div>
-								<input id="form2-username" class="field" name="form2-username" type="text" placeholder="Your Name">
-							</label>
-							<label for="form2-email">
-								<div class="icon-wrapper"><img src="img/envelope.png" alt="envelope"></div>
-								<input id="form2-email" class="field" name="form2-email" type="email" placeholder="Your Email">
-							</label>
-							<textarea id="form2-message" name="form2-message" placeholder="Type your message..."></textarea>
-							<label for="form2-email-copy" class="check">
+							<div class="field-wrapper" for="form2-username">
+								<label class="icon-wrapper">
+									<img src="img/user.png" alt="user">
+								</label>
+								<input id="form2-username" class="field" name="form2-username" type="text" placeholder="Your Name" required>
+							</div>
+							<div class="field-wrapper" for="form2-email">
+								<label class="icon-wrapper">
+									<img src="img/envelope.png" alt="envelope">
+								</label>
+								<input id="form2-email" class="field" name="form2-email" type="email" placeholder="Your Email" required>
+							</div>
+							<textarea id="form2-message" name="form2-message" placeholder="Type your message..." required></textarea>
+							<label class="field-wrapper check" for="form2-email-copy">
 								<input id="form2-email-copy" type="checkbox">
 								<div></div>
 								Send a copy to my email
@@ -84,15 +98,19 @@
 					<h2>Sign In Form</h2>
 					<div class="form-wrapper">
 						<form id="form3" class="form3">
-							<label for="form3-username">
-								<div class="icon-wrapper"><img src="img/user.png" alt="user"></div>
-								<input id="form3-username" class="field" name="form3-username" type="text" placeholder="Your Name">
-							</label>
-							<label for="form3-password">
-								<div class="icon-wrapper"><img src="img/lock.png" alt="lock"></div>
-								<input id="form3-password" class="field" name="form3-password" type="password" placeholder="Password">
-							</label>
-							<label for="form3-remember" class="check">
+							<div class="field-wrapper" for="form3-username">
+								<label class="icon-wrapper">
+									<img src="img/user.png" alt="user">
+								</label>
+								<input id="form3-username" class="field" name="form3-username" type="text" placeholder="Your Name" required>
+							</div>
+							<div class="field-wrapper" for="form3-password">
+								<label class="icon-wrapper">
+									<img src="img/lock.png" alt="lock">
+								</label>
+								<input id="form3-password" class="field" name="form3-password" type="password" placeholder="Password" required>
+							</div>
+							<label class="field-wrapper check" for="form3-remember">
 								<input id="form3-remember" type="checkbox">
 								<div></div>
 								Remember me
@@ -105,14 +123,18 @@
 					<h2>Recover Form</h2>
 					<div class="form-wrapper">
 						<form id="form4">
-							<label for="form4-email">
-								<div class="icon-wrapper"><img src="img/envelope.png" alt="envelope"></div>
-								<input id="form4-email" class="field" name="form4-email" type="email" placeholder="Enter your Email">
-							</label>
-							<label for="form4-phone">
-								<div class="icon-wrapper"><img src="img/phone.png" alt="phone"></div>
-								<input id="form4-phone" class="field" name="form4-phone" type="tel" placeholder="Enter your Phone number">
-							</label>
+							<div class="field-wrapper" for="form4-email">
+								<label class="icon-wrapper">
+									<img src="img/envelope.png" alt="envelope">
+								</label>
+								<input id="form4-email" class="field" name="form4-email" type="email" placeholder="Enter your Email" required>
+							</div>
+							<div class="field-wrapper" for="form4-phone">
+								<label class="icon-wrapper">
+									<img src="img/phone.png" alt="phone">
+								</label>
+								<input id="form4-phone" class="field" name="form4-phone" type="tel" placeholder="Enter your Phone number" required>
+							</div>
 							<button class="small">Send</button>
 							<button class="small right" disabled>Done</button>
 						</form>
@@ -122,10 +144,12 @@
 					<h2>Subscribe Form</h2>
 					<div class="form-wrapper">
 						<form id="form5">
-							<label for="form5-email">
-								<div class="icon-wrapper"><img src="img/envelope.png" alt="envelope"></div>
-								<input id="form5-email" class="field" name="form5-email" type="email" placeholder="Enter your Email">
-							</label>
+							<div class="field-wrapper" for="form5-email">
+								<label class="icon-wrapper">
+									<img src="img/envelope.png" alt="envelope">
+								</label>
+								<input id="form5-email" class="field" name="form5-email" type="email" placeholder="Enter your Email" required>
+							</div>
 							<button class="small">Subscribe</button>
 							<button class="small resignation right">No, Thanks</button>
 						</form>
