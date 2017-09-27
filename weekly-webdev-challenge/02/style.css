@@ -425,7 +425,7 @@ footer .author span {
 
 @media screen and (min-width: 1024px) {
 	.subscribe {
-		background: url('img/bg5.png') center right;
+		background: url('img/bg5.png') center right no-repeat;
 	}
 }
 
