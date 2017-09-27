@@ -1,0 +1,24 @@
+Pacifico Regular
+- logo: 50pt
+- footer logo: 25pt
+
+Raleway Bold:
+- menu: 16pt
+- heading2: 90pt
+- icon button: 20pt
+- heading3: 40pt
+- date: 32pt
+- title: 20pt
+- labels: 17pt
+- contact form focus: 15pt
+
+Raleway Heavy
+- heading1: 60pt
+
+Raleway Light
+- text: 17pt
+- button: 20pt
+- author and time: 20pt
+- contact info: 17pt
+- contact form: 15pt
+- footer text: 16pt/15pt
