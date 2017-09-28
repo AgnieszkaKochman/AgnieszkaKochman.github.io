@@ -12,11 +12,6 @@ div.container-fluid {
 	padding: 0;
 }
 
-section {
-	min-height: 100vh;
-	height: auto;
-}
-
 p {
 	font-size: 15px;
 	font-weight: 300;
@@ -81,13 +76,15 @@ h6 {
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
-	/*border-top: 4px solid #FE6031;
-	padding-top: 4px;*/
+	border-top: 4px solid #FE6031;
+	padding-top: 4px;
 }
 
 .home {
 	background: url('img/bg1.png');
 	background-size: cover;
+	min-height: 100vh;
+	height: auto;
 }
 
 .home h1 {
